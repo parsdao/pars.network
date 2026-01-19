@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pars Network - Braided Sovereignty</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --text: #e0e0e0;
+      --accent-blue: #8b8bff;
+      --accent-green: #8bff8b;
+      --accent-red: #ff8b8b;
+      --card-bg: #1a1a2e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .tagline {
+      font-size: 1.25rem;
+      color: #888;
+      font-style: italic;
+    }
+    .architecture-container {
+      max-width: 1600px;
+      margin: 0 auto 3rem;
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .architecture-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .flows {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .flow-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent-blue);
+    }
+    .flow-card.flow-1 { border-color: #9999ff; }
+    .flow-card.flow-2 { border-color: #99ff99; }
+    .flow-card.flow-3 { border-color: #ffff66; }
+    .flow-card.flow-4 { border-color: #ff6699; }
+    .flow-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .flow-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      line-height: 1.6;
+    }
+    .invariant {
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #1a1a2e 0%, #2e1a1a 100%);
+      border-radius: 12px;
+      border: 1px solid #444;
+    }
+    .invariant p {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    .properties {
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+    .properties h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .properties table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .properties td, .properties th {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    .properties th {
+      color: var(--accent-blue);
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      color: #666;
+    }
+    footer a { color: var(--accent-blue); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pars Network</h1>
+    <p class="tagline">Private coordination, public legitimacy.</p>
+  </header>
+
+  <div class="architecture-container">
+    <img src="architecture.svg" alt="Braided Sovereignty Architecture">
+  </div>
+
+  <section class="flows">
+    <div class="flow-card flow-1">
+      <h3>Flow 1: Encrypted Communications</h3>
+      <p><strong>Edge ↔ Mesh</strong><br>
+      PQ/hybrid encrypted, store-and-forward, offline tolerant.<br>
+      <em>This flow never touches Finality.</em></p>
+    </div>
+    <div class="flow-card flow-2">
+      <h3>Flow 2: State Anchors</h3>
+      <p><strong>Mesh → Finality</strong><br>
+      Merkle roots: membership/doc/ops (periodic)<br>
+      <code>H(MembershipRoot || DocRoot || Epoch)</code></p>
+    </div>
+    <div class="flow-card flow-3">
+      <h3>Flow 3: Attestation Braid</h3>
+      <p><strong>Mesh → ThresholdVM → EVM</strong><br>
+      ThresholdSign(domain, msgHash)<br>
+      <em>Verifiable authorization without disclosure</em></p>
+    </div>
+    <div class="flow-card flow-4">
+      <h3>Flow 4: Receipts</h3>
+      <p><strong>EVM → Edge</strong><br>
+      Public receipts, audit trails, governance outcomes returned to clients.</p>
+    </div>
+  </section>
+
+  <section class="invariant">
+    <p>Content stays private off-chain; chain verifies commitments + authorizes outcomes.</p>
+  </section>
+
+  <section class="properties">
+    <h2>Security Properties</h2>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Mechanism</th>
+      </tr>
+      <tr>
+        <td>Censorship-resilient</td>
+        <td>Distributed routing + store/forward + no single point</td>
+      </tr>
+      <tr>
+        <td>Intermittent-connectivity tolerant</td>
+        <td>Queue + retry + TTL</td>
+      </tr>
+      <tr>
+        <td>Privacy-preserving</td>
+        <td>E2E encryption + minimal metadata</td>
+      </tr>
+      <tr>
+        <td>Verifiable governance</td>
+        <td>Attestations + receipts</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>
+      <a href="https://github.com/luxfi/pars">pars</a> |
+      <a href="https://github.com/luxfi/session">session</a> |
+      <a href="https://github.com/hanzo-ai/civicos">civicos</a>
+    </p>
+  </footer>
+</body>
+</html>

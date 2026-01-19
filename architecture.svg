@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="1600" height="900" fill="#0a0a0f"/>
+
+  <!-- Title -->
+  <text x="800" y="50" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Braided Sovereignty - Pars Network Architecture</text>
+
+  <!-- Ribbon 1: Edge Layer -->
+  <rect x="50" y="100" width="1500" height="180" rx="20" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
+  <text x="80" y="135" fill="#8b8bff" font-size="20" font-weight="bold">EDGE: CivicOS Clients</text>
+
+  <!-- Client devices -->
+  <g transform="translate(200, 160)">
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#2a2a4e" stroke="#5a5a8a"/>
+    <text x="40" y="80" text-anchor="middle" fill="#aaa" font-size="10">Client</text>
+  </g>
+  <g transform="translate(400, 170)">
+    <rect x="0" y="0" width="70" height="50" rx="8" fill="#2a2a4e" stroke="#5a5a8a"/>
+    <text x="35" y="70" text-anchor="middle" fill="#aaa" font-size="10">Client</text>
+  </g>
+  <g transform="translate(600, 155)">
+    <rect x="0" y="0" width="85" height="65" rx="8" fill="#2a2a4e" stroke="#5a5a8a"/>
+    <text x="42" y="85" text-anchor="middle" fill="#aaa" font-size="10">Client</text>
+  </g>
+
+  <!-- Edge callout -->
+  <rect x="900" y="130" width="400" height="50" rx="8" fill="#1e1e3a"/>
+  <text x="920" y="160" fill="#7a7aff" font-size="13">Encrypted local store • Key mgmt (PQ/hybrid) • Offline queue</text>
+
+  <!-- Edge differentiator -->
+  <rect x="1320" y="200" width="210" height="50" rx="10" fill="#2a1a4e" stroke="#8a5aff"/>
+  <text x="1330" y="225" fill="#b8a8ff" font-size="11">Offline-first: local queue +</text>
+  <text x="1330" y="240" fill="#b8a8ff" font-size="11">deterministic IDs</text>
+
+  <!-- Ribbon 2: Mesh Layer -->
+  <rect x="50" y="320" width="1500" height="200" rx="20" fill="#1a2e1a" stroke="#4a6a4a" stroke-width="2"/>
+  <text x="80" y="355" fill="#8bff8b" font-size="20" font-weight="bold">MESH: sessiond Swarms (3-7)</text>
+
+  <!-- Swarm cluster -->
+  <g transform="translate(350, 380)">
+    <circle cx="0" cy="0" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="60" cy="-20" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="60" cy="40" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="120" cy="0" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="120" cy="50" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="180" cy="20" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <circle cx="140" cy="-30" r="25" fill="#2e4e2e" stroke="#5a8a5a"/>
+    <!-- Swarm connections -->
+    <line x1="25" y1="0" x2="35" y2="-10" stroke="#4a7a4a" stroke-width="1"/>
+    <line x1="85" y1="-20" x2="95" y2="0" stroke="#4a7a4a" stroke-width="1"/>
+    <line x1="85" y1="40" x2="95" y2="25" stroke="#4a7a4a" stroke-width="1"/>
+  </g>
+
+  <!-- Mesh callout -->
+  <rect x="700" y="360" width="450" height="50" rx="8" fill="#1e3a1e"/>
+  <text x="720" y="390" fill="#7aff7a" font-size="13">Store-and-forward (TTL) • Relay/rendezvous • Encrypted state sync (CRDT)</text>
+
+  <!-- Mesh differentiator -->
+  <rect x="1320" y="420" width="210" height="60" rx="10" fill="#1a4e2a" stroke="#5aff8a"/>
+  <text x="1330" y="445" fill="#a8ffb8" font-size="11">Swarms: committee replication</text>
+  <text x="1330" y="460" fill="#a8ffb8" font-size="11">No trusted server</text>
+  <text x="1330" y="475" fill="#a8ffb8" font-size="11">Encrypted CRDT</text>
+
+  <!-- Ribbon 3: Finality Layer -->
+  <rect x="50" y="560" width="1500" height="220" rx="20" fill="#2e1a1a" stroke="#6a4a4a" stroke-width="2"/>
+  <text x="80" y="595" fill="#ff8b8b" font-size="20" font-weight="bold">FINALITY: Pars Chain (Verification + Governance)</text>
+
+  <!-- Finality pipeline -->
+  <rect x="120" y="640" width="160" height="80" rx="10" fill="#4e2e2e" stroke="#8a5a5a"/>
+  <text x="200" y="675" text-anchor="middle" fill="#ffaaaa" font-size="14" font-weight="bold">ThresholdVM</text>
+  <text x="200" y="700" text-anchor="middle" fill="#cc8888" font-size="10">Threshold attestations</text>
+  <text x="200" y="715" text-anchor="middle" fill="#cc8888" font-size="10">Equivocation detection</text>
+
+  <path d="M290,680 L340,680" stroke="#ff6666" stroke-width="3" marker-end="url(#arrowRed)"/>
+
+  <rect x="350" y="640" width="180" height="80" rx="10" fill="#4e2e2e" stroke="#8a5a5a"/>
+  <text x="440" y="675" text-anchor="middle" fill="#ffaaaa" font-size="14" font-weight="bold">PlatformVM Session</text>
+  <text x="440" y="700" text-anchor="middle" fill="#cc8888" font-size="10">Deterministic session</text>
+  <text x="440" y="715" text-anchor="middle" fill="#cc8888" font-size="10">lifecycle</text>
+
+  <path d="M540,680 L590,680" stroke="#ff6666" stroke-width="3" marker-end="url(#arrowRed)"/>
+
+  <rect x="600" y="640" width="180" height="80" rx="10" fill="#4e2e2e" stroke="#8a5a5a"/>
+  <text x="690" y="675" text-anchor="middle" fill="#ffaaaa" font-size="14" font-weight="bold">EVM Policy/Exec</text>
+  <text x="690" y="700" text-anchor="middle" fill="#cc8888" font-size="10">Governance • Treasury</text>
+  <text x="690" y="715" text-anchor="middle" fill="#cc8888" font-size="10">Policy • Public receipts</text>
+
+  <path d="M790,680 L840,680" stroke="#ff6666" stroke-width="3" marker-end="url(#arrowRed)"/>
+
+  <rect x="850" y="640" width="160" height="80" rx="10" fill="#4e2e2e" stroke="#8a5a5a"/>
+  <text x="930" y="675" text-anchor="middle" fill="#ffaaaa" font-size="14" font-weight="bold">Receipt Ledger</text>
+  <text x="930" y="700" text-anchor="middle" fill="#cc8888" font-size="10">Immutable audit trail</text>
+
+  <!-- Finality differentiator -->
+  <rect x="1100" y="640" width="250" height="60" rx="10" fill="#4e1a2a" stroke="#ff5a8a"/>
+  <text x="1110" y="665" fill="#ffb8c8" font-size="11">Proof-gated actions: threshold</text>
+  <text x="1110" y="680" fill="#ffb8c8" font-size="11">domains, receipts anchored</text>
+  <text x="1110" y="695" fill="#ffb8c8" font-size="11">to finality</text>
+
+  <!-- Flow 1: Encrypted Communications (bidirectional, thick) -->
+  <path d="M350,280 L420,320" stroke="#9999ff" stroke-width="6" stroke-dasharray="none"/>
+  <path d="M420,320 L350,280" stroke="#9999ff" stroke-width="6" stroke-dasharray="none"/>
+  <circle cx="385" cy="300" r="8" fill="#9999ff"/>
+  <rect x="440" y="285" width="350" height="35" rx="5" fill="#1a1a3e"/>
+  <text x="455" y="308" fill="#bbbbff" font-size="12">PQ/hybrid encrypted • store-and-forward • offline-tolerant</text>
+
+  <!-- Flow 2: State Anchors (dotted, one-way) -->
+  <path d="M550,520 L440,560" stroke="#99ff99" stroke-width="2" stroke-dasharray="8,4"/>
+  <rect x="420" y="530" width="280" height="25" rx="5" fill="#1a3a1e"/>
+  <text x="435" y="548" fill="#bbffbb" font-size="11">Anchors: H(MembershipRoot || DocRoot || Epoch)</text>
+
+  <!-- Flow 3: Attestation Braid -->
+  <path d="M500,450 L200,600" stroke="#ffff66" stroke-width="2"/>
+  <text x="280" y="510" fill="#ffff99" font-size="11">Request attestation (domain, msgHash)</text>
+  <path d="M280,680 L600,680" stroke="#ff9966" stroke-width="2"/>
+  <text x="350" y="750" fill="#ffcc99" font-size="11">Threshold signature attestation</text>
+
+  <!-- Attestation meet point -->
+  <rect x="200" y="580" width="200" height="20" rx="5" fill="#3a3a1a"/>
+  <text x="210" y="594" fill="#ffff88" font-size="10">Verifiable authorization without disclosure</text>
+
+  <!-- Flow 4: Receipts back -->
+  <path d="M930,640 L650,280" stroke="#ff6699" stroke-width="2"/>
+  <rect x="750" y="450" width="200" height="25" rx="5" fill="#3a1a2a"/>
+  <text x="760" y="467" fill="#ffaacc" font-size="11">Public receipts / governance outcomes</text>
+
+  <!-- Footer invariant -->
+  <rect x="300" y="820" width="1000" height="50" rx="10" fill="#1a1a1a" stroke="#555"/>
+  <text x="800" y="852" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Content stays private off-chain; chain verifies commitments + authorizes outcomes.</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6666"/>
+    </marker>
+  </defs>
+</svg>
