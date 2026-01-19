@@ -85,6 +85,6 @@ Public receipts, governance outcomes, and audit trails returned to clients.
 
 ## Related Projects
 
-- [pars](https://github.com/luxfi/pars) - EVM precompiles for PQ crypto, ZK, FHE, threshold signatures
-- [session](https://github.com/luxfi/session) - Session protocol implementation
-- [civicos](https://github.com/hanzo-ai/civicos) - Privacy-preserving civic coordination platform
+- [pars](https://github.com/parsdao/pars) - EVM precompiles for PQ crypto, ZK, FHE, threshold signatures
+- [session](https://github.com/parsdao/session) - Session protocol implementation
+- [civicos](https://github.com/parsdao/civicos) - Privacy-preserving civic coordination platform
