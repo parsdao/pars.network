@@ -22,10 +22,10 @@ const footerLinks = {
   ecosystem: {
     title: 'Ecosystem',
     items: [
-      { title: 'pars.id', href: 'https://pars.id', external: true },
+      { title: 'pars.id', href: '/id' },
+      { title: 'DeFi', href: '#defi' },
       { title: 'Session', href: '#session' },
-      { title: 'Mesh Network', href: '#mesh' },
-      { title: 'Validators', href: 'https://docs.pars.network/validators', external: true },
+      { title: 'Validators', href: '#validators' },
     ],
   },
   community: {
@@ -129,7 +129,7 @@ export function SiteFooter() {
                 <span className="text-xs text-white/50 mt-1 tracking-wider">NETWORK</span>
               </Link>
               <p className="text-sm text-white/50 mb-6 max-w-xs">
-                Braided sovereignty for the Persian diaspora. Private, post-quantum, unstoppable.
+                Persian sovereignty. Sovereign L1 blockchain with post-quantum security and DeFi.
               </p>
               {/* Social Links */}
               <div className="flex items-center gap-4">

@@ -5,15 +5,15 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pars Network - Braided Sovereignty',
+    default: 'Pars Network - Persian Sovereignty',
     template: '%s | Pars Network',
   },
-  description: 'Session-based private communications with post-quantum security and coercion resistance for the Persian diaspora.',
-  keywords: ['Pars', 'blockchain', 'privacy', 'post-quantum', 'session', 'mesh network', 'coercion resistant', 'Persian', 'diaspora'],
+  description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure for the Persian diaspora.',
+  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Persian', 'diaspora', 'Lux'],
   authors: [{ name: 'Pars Network' }],
   openGraph: {
     title: 'Pars Network',
-    description: 'Braided Sovereignty - Private, Post-Quantum, Unstoppable',
+    description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
     type: 'website',
     locale: 'en_US',
     url: 'https://pars.network',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pars Network',
-    description: 'Braided Sovereignty - Private, Post-Quantum, Unstoppable',
+    description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
     creator: '@parsnetwork',
   },
   robots: {

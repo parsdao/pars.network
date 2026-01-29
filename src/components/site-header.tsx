@@ -4,9 +4,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const navLinks = [
+  { href: '#technology', label: 'Technology' },
   { href: '#identity', label: 'Identity' },
-  { href: '#session', label: 'Session' },
-  { href: '#mesh', label: 'Mesh' },
+  { href: '#defi', label: 'DeFi' },
+  { href: '#validators', label: 'Validators' },
   { href: 'https://docs.pars.network', label: 'Docs', external: true },
   { href: 'https://explore.pars.network', label: 'Explorer', external: true },
 ]
@@ -51,7 +52,7 @@ export function SiteHeader() {
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <a
-            href="https://pars.id"
+            href="/id"
             className="hidden sm:inline-flex px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
           >
             Get pars.id
@@ -117,7 +118,7 @@ export function SiteHeader() {
               )
             ))}
             <a
-              href="https://pars.id"
+              href="/id"
               className="inline-flex justify-center px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
             >
               Get pars.id
