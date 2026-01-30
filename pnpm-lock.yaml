@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      geist:
+        specifier: ^1.5.1
+        version: 1.5.1(next@15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       next:
         specifier: 15.1.6
         version: 15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -373,6 +376,11 @@ packages:
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
+
+  geist@1.5.1:
+    resolution: {integrity: sha512-mAHZxIsL2o3ZITFaBVFBnwyDOw+zNLYum6A6nIjpzCGIO8QtC3V76XF2RnZTyLx1wlDTmMDy8jg3Ib52MIjGvQ==}
+    peerDependencies:
+      next: '>=13.2.0'
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -956,6 +964,10 @@ snapshots:
     optional: true
 
   function-bind@1.1.2: {}
+
+  geist@1.5.1(next@15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+    dependencies:
+      next: 15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   glob-parent@5.1.2:
     dependencies:

@@ -17,27 +17,17 @@ module.exports = {
           foreground: 'rgb(var(--muted) / 0.7)',
         },
         border: 'rgb(var(--border) / 0.1)',
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        // Win2k border system
+        win: {
+          light: '#555',
+          mid: '#333',
+          dark: '#1a1a1a',
+          face: '#2a2a2f',
+          titlebar: 'rgb(var(--gold) / 0.12)',
+        },
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
-      },
-      animation: {
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-        'float': 'float 3s ease-in-out infinite',
-      },
-      keyframes: {
-        'pulse-glow': {
-          '0%, 100%': { opacity: '0.6' },
-          '50%': { opacity: '1' },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
+        mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       },
     },
   },

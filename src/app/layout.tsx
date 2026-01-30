@@ -1,19 +1,20 @@
 import type { Metadata, Viewport } from 'next'
+import { GeistMono } from 'geist/font/mono'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pars Network - Persian Sovereignty',
+    default: 'Pars Network — Sovereign L1',
     template: '%s | Pars Network',
   },
-  description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure for the Persian diaspora.',
-  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Persian', 'diaspora', 'Lux'],
+  description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure.',
+  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'EVM', 'Lux'],
   authors: [{ name: 'Pars Network' }],
   openGraph: {
     title: 'Pars Network',
-    description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
+    description: 'Sovereign L1 with Post-Quantum Security',
     type: 'website',
     locale: 'en_US',
     url: 'https://pars.network',
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pars Network',
-    description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
+    description: 'Sovereign L1 with Post-Quantum Security',
     creator: '@parsnetwork',
   },
   robots: {
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#E6B800',
+  themeColor: '#0b1215',
 }
 
 export default function RootLayout({
@@ -43,9 +44,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-background text-foreground antialiased">
-        <div className="relative flex min-h-screen flex-col">
+    <html lang="en" className={`scroll-smooth ${GeistMono.variable}`}>
+      <body className="min-h-screen text-foreground antialiased font-mono">
+        <div className="desktop-window">
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
