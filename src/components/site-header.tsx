@@ -8,7 +8,7 @@ const navLinks = [
   { href: '#identity', label: 'Identity' },
   { href: '#defi', label: 'DeFi' },
   { href: '#validators', label: 'Validators' },
-  { href: 'https://docs.pars.network', label: 'Docs', external: true },
+  { href: '/docs', label: 'Docs', external: true },
   { href: 'https://explore.pars.network', label: 'Explorer', external: true },
 ]
 
@@ -52,7 +52,7 @@ export function SiteHeader() {
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <a
-            href="https://docs.pars.network"
+            href="/docs"
             className="hidden sm:inline-flex px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
           >
             Start Building
@@ -118,7 +118,7 @@ export function SiteHeader() {
               )
             ))}
             <a
-              href="https://docs.pars.network"
+              href="/docs"
               className="inline-flex justify-center px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
             >
               Start Building

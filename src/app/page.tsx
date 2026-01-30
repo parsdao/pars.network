@@ -120,7 +120,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <a href="https://docs.pars.network" className="btn-primary">
+            <a href="/docs" className="btn-primary">
               Start Building
             </a>
             <a href="https://explore.pars.network" className="btn-secondary">
@@ -390,7 +390,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 text-center">
-            <a href="https://docs.pars.network/validators" className="btn-primary">
+            <a href="/docs/validators" className="btn-primary">
               Validator Documentation
             </a>
           </div>

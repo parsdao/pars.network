@@ -7,16 +7,16 @@ const footerLinks = {
       { title: 'Explorer', href: 'https://explore.pars.network', external: true },
       { title: 'Bridge', href: 'https://bridge.pars.network', external: true },
       { title: 'Status', href: 'https://status.pars.network', external: true },
-      { title: 'RPC Endpoints', href: 'https://docs.pars.network/rpc', external: true },
+      { title: 'RPC Endpoints', href: '/docs/rpc', external: true },
     ],
   },
   developers: {
     title: 'Developers',
     items: [
-      { title: 'Documentation', href: 'https://docs.pars.network', external: true },
+      { title: 'Documentation', href: '/docs', external: true },
       { title: 'GitHub', href: 'https://github.com/pars-network', external: true },
-      { title: 'SDK', href: 'https://docs.pars.network/sdk', external: true },
-      { title: 'Run a Node', href: 'https://docs.pars.network/node', external: true },
+      { title: 'SDK', href: '/docs/sdk', external: true },
+      { title: 'Run a Node', href: '/docs/node', external: true },
     ],
   },
   ecosystem: {
@@ -163,10 +163,10 @@ export function SiteFooter() {
               &copy; {new Date().getFullYear()} Pars Network. One day, we go home.
             </div>
             <div className="flex items-center gap-6 text-sm text-white/30">
-              <a href="https://docs.pars.network/privacy" className="hover:text-white/60 transition-colors">
+              <a href="/docs/privacy" className="hover:text-white/60 transition-colors">
                 Privacy
               </a>
-              <a href="https://docs.pars.network/terms" className="hover:text-white/60 transition-colors">
+              <a href="/docs/terms" className="hover:text-white/60 transition-colors">
                 Terms
               </a>
             </div>
