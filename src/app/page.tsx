@@ -120,14 +120,14 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <a href="/id" className="btn-primary">
-              Claim pars.id Identity
+            <a href="https://pars.id" className="btn-primary">
+              Open App
             </a>
-            <a href="https://docs.pars.network/node" className="btn-secondary">
-              Run a Validator
+            <a href="https://docs.pars.network" className="btn-secondary">
+              Documentation
             </a>
-            <a href="https://bridge.pars.network" className="btn-secondary">
-              Bridge Assets
+            <a href="https://explore.pars.network" className="btn-secondary">
+              Explorer
             </a>
           </div>
 
@@ -190,7 +190,7 @@ export default function Home() {
             {identityFeatures.map((item, i) => (
               <a
                 key={i}
-                href="/id"
+                href="https://pars.id"
                 className="card card-hover group"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
@@ -218,7 +218,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
-              <a href="/id" className="text-gold hover:text-gold-light transition-colors text-sm font-medium">
+              <a href="https://pars.id" className="text-gold hover:text-gold-light transition-colors text-sm font-medium">
                 Claim your pars.id →
               </a>
             </div>
@@ -409,7 +409,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/id" className="btn-primary">
+            <a href="https://pars.id" className="btn-primary">
               Claim Your Identity
             </a>
             <a href="https://discord.gg/pars" className="btn-secondary">

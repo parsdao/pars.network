@@ -52,10 +52,10 @@ export function SiteHeader() {
         {/* CTA Button */}
         <div className="flex items-center gap-4">
           <a
-            href="/id"
+            href="https://pars.id"
             className="hidden sm:inline-flex px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
           >
-            Get pars.id
+            Open App
           </a>
 
           {/* Mobile Menu Button */}
@@ -118,10 +118,10 @@ export function SiteHeader() {
               )
             ))}
             <a
-              href="/id"
+              href="https://pars.id"
               className="inline-flex justify-center px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
             >
-              Get pars.id
+              Open App
             </a>
           </nav>
         </div>

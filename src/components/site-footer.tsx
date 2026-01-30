@@ -22,7 +22,7 @@ const footerLinks = {
   ecosystem: {
     title: 'Ecosystem',
     items: [
-      { title: 'pars.id', href: '/id' },
+      { title: 'pars.id App', href: 'https://pars.id', external: true },
       { title: 'DeFi', href: '#defi' },
       { title: 'Session', href: '#session' },
       { title: 'Validators', href: '#validators' },
