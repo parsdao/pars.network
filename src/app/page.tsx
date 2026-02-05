@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-16 pb-20 px-4 overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-radial-gold" />
 
@@ -101,6 +101,15 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             <span className="text-sm text-white/70">Chain ID: 494949 — Mainnet Live</span>
+          </div>
+
+          {/* Hero Logo */}
+          <div className="mb-8">
+            <img
+              src="/assets/logo.png"
+              alt="Pars Network - Persian 8-Pointed Star"
+              className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto animate-float drop-shadow-2xl"
+            />
           </div>
 
           {/* Main Headline */}
@@ -115,7 +124,7 @@ export default function Home() {
 
           <p className="text-lg text-white/50 mb-12 max-w-2xl mx-auto text-balance">
             A sovereign Layer 1 blockchain with post-quantum cryptography,
-            private communications, and DeFi infrastructure for the Persian diaspora.
+            private communications, and DeFi infrastructure for the global Parsi community.
           </p>
 
           {/* CTA Buttons */}
@@ -135,7 +144,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {stats.map((stat, i) => (
               <div key={i} className="card">
-                <div className="text-2xl font-bold text-gold">{stat.value}</div>
+                <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-white/50">{stat.label}</div>
               </div>
             ))}
@@ -207,18 +216,18 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-4">DID Format</h3>
             <div className="font-mono text-sm space-y-2">
               <div>
-                <span className="text-gold">did:pars:</span>
+                <span className="text-blue">did:pars:</span>
                 <span className="text-white/70">0x1234...abcd</span>
                 <span className="text-white/40 ml-2">(address)</span>
               </div>
               <div>
-                <span className="text-gold">did:pars:</span>
+                <span className="text-blue">did:pars:</span>
                 <span className="text-white/70">ali.pars</span>
                 <span className="text-white/40 ml-2">(human-readable)</span>
               </div>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
-              <a href="https://pars.id" className="text-gold hover:text-gold-light transition-colors text-sm font-medium">
+              <a href="https://pars.id" className="text-white hover:text-white/80 transition-colors text-sm font-medium">
                 Claim your pars.id →
               </a>
             </div>
@@ -307,7 +316,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="card">
-              <h3 className="text-lg font-semibold mb-4 text-gold">Mainnet</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Mainnet</h3>
               <div className="space-y-3 font-mono text-sm">
                 <div className="flex justify-between">
                   <span className="text-white/50">Network Name</span>
@@ -373,17 +382,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="card text-center">
-              <div className="text-3xl font-bold text-gold mb-2">15K</div>
+              <div className="text-3xl font-bold text-white mb-2">15K</div>
               <div className="text-sm text-white/50 mb-4">PARS Minimum Stake</div>
               <div className="text-xs text-white/30">Standard Validator</div>
             </div>
             <div className="card text-center">
-              <div className="text-3xl font-bold text-gold mb-2">8-12%</div>
+              <div className="text-3xl font-bold text-white mb-2">8-12%</div>
               <div className="text-sm text-white/50 mb-4">Annual Yield</div>
               <div className="text-xs text-white/30">Varies with stake</div>
             </div>
             <div className="card text-center">
-              <div className="text-3xl font-bold text-gold mb-2">2 weeks</div>
+              <div className="text-3xl font-bold text-white mb-2">2 weeks</div>
               <div className="text-sm text-white/50 mb-4">Unbonding Period</div>
               <div className="text-xs text-white/30">No slashing risk</div>
             </div>

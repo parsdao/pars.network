@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '#technology', label: 'Technology' },
@@ -19,9 +20,18 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-gradient-gold">PARS</span>
-          <span className="text-xs text-white/50 mt-1 tracking-wider">NETWORK</span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/assets/logo.png"
+            alt="Pars Network"
+            width={40}
+            height={40}
+            className="w-10 h-10"
+          />
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-xl font-bold text-gradient-gold">PARS</span>
+            <span className="text-xs text-white/50 tracking-wider">NETWORK</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

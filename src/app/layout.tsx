@@ -8,9 +8,13 @@ export const metadata: Metadata = {
     default: 'Pars Network - Persian Sovereignty',
     template: '%s | Pars Network',
   },
-  description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure for the Persian diaspora.',
-  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Persian', 'diaspora', 'Lux'],
+  description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure for the global Parsi community.',
+  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Parsi', 'Persian', 'Lux'],
   authors: [{ name: 'Pars Network' }],
+  icons: {
+    icon: '/assets/logo.png',
+    apple: '/assets/logo.png',
+  },
   openGraph: {
     title: 'Pars Network',
     description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
@@ -18,12 +22,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://pars.network',
     siteName: 'Pars Network',
+    images: ['/assets/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pars Network',
     description: 'Persian Sovereignty - Sovereign L1 with Post-Quantum Security',
     creator: '@parsnetwork',
+    images: ['/assets/logo.png'],
   },
   robots: {
     index: true,

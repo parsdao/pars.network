@@ -4,10 +4,16 @@
 
 @layer base {
   :root {
-    --background: 10 10 15;
-    --foreground: 224 224 224;
-    --gold: 230 184 0;
-    --gold-light: 255 215 0;
+    --background: 8 10 18;
+    --foreground: 240 240 245;
+    /* Persian gold - richer, less yellow */
+    --gold: 212 167 74;
+    --gold-light: 232 195 112;
+    --gold-dark: 180 140 50;
+    /* Persian blue - from the logo */
+    --blue: 30 87 153;
+    --blue-light: 41 137 216;
+    --blue-dark: 15 50 90;
     --muted: 255 255 255;
     --border: 255 255 255;
   }
@@ -23,16 +29,23 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
-  /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  /* Gold gradient text */
+  /* Gold gradient text - richer Persian gold */
   .text-gradient-gold {
-    background: linear-gradient(135deg, rgb(var(--gold)) 0%, rgb(var(--gold-light)) 50%, rgb(var(--gold)) 100%);
+    background: linear-gradient(135deg, #d4a74a 0%, #e8c370 40%, #c8a040 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Blue gradient text - Persian blue */
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -40,34 +53,54 @@
 
   /* Glow effects */
   .glow-gold {
-    box-shadow: 0 0 20px rgb(var(--gold) / 0.3);
+    box-shadow: 0 0 20px rgb(var(--gold) / 0.25);
   }
 
   .glow-gold-lg {
-    box-shadow: 0 0 40px rgb(var(--gold) / 0.4);
+    box-shadow: 0 0 40px rgb(var(--gold) / 0.3);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px rgb(var(--blue) / 0.4);
   }
 
   /* Card styles */
   .card {
-    @apply p-6 bg-white/5 rounded-2xl border border-white/10;
+    @apply p-6 bg-white/[0.03] rounded-2xl border border-white/[0.08];
   }
 
   .card-hover {
-    @apply hover:border-gold/50 transition-all duration-200;
+    @apply hover:border-white/20 hover:bg-white/[0.05] transition-all duration-200;
   }
 
-  /* Button styles */
+  /* Button styles - cleaner white/gold */
   .btn-primary {
-    @apply px-6 py-3 bg-gold text-black font-semibold rounded-xl hover:bg-gold-light transition-all duration-200;
+    @apply px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-white/90 transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white/5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-200;
+    @apply px-6 py-3 bg-white/[0.05] border border-white/[0.15] text-white font-semibold rounded-xl hover:bg-white/[0.1] hover:border-white/25 transition-all duration-200;
+  }
+
+  .btn-gold {
+    @apply px-6 py-3 font-semibold rounded-xl transition-all duration-200;
+    background: linear-gradient(135deg, #d4a74a 0%, #c8a040 100%);
+    color: #0a0c12;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #e8c370 0%, #d4a74a 100%);
   }
 
   /* Badge/Tag styles */
   .badge {
-    @apply px-3 py-1 bg-gold/10 text-gold text-xs rounded-full;
+    @apply px-3 py-1 bg-white/[0.08] text-white/80 text-xs rounded-full border border-white/[0.1];
+  }
+
+  .badge-gold {
+    @apply px-3 py-1 text-xs rounded-full;
+    background: rgb(var(--gold) / 0.15);
+    color: rgb(var(--gold-light));
+    border: 1px solid rgb(var(--gold) / 0.25);
   }
 
   /* Section container */
@@ -97,21 +130,43 @@
   }
 
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
-  /* Radial gradient background */
+  /* Radial gradient background - subtle blue tint */
   .bg-radial-gold {
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgb(var(--gold) / 0.15) 0%, transparent 50%);
+    background: radial-gradient(ellipse 100% 60% at 50% -10%, rgb(var(--blue) / 0.15) 0%, transparent 60%);
   }
 
   /* Glass effect */
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
   }
 
   /* Text balance */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Text colors */
+  .text-gold {
+    color: rgb(var(--gold));
+  }
+  .text-gold-light {
+    color: rgb(var(--gold-light));
+  }
+  .text-blue {
+    color: rgb(var(--blue-light));
+  }
+
+  /* Background colors */
+  .bg-gold {
+    background-color: rgb(var(--gold));
+  }
+  .bg-gold-light {
+    background-color: rgb(var(--gold-light));
+  }
+  .bg-blue {
+    background-color: rgb(var(--blue));
   }
 }
