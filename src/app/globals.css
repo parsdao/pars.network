@@ -10,10 +10,10 @@
     --gold: 212 167 74;
     --gold-light: 232 195 112;
     --gold-dark: 180 140 50;
-    /* Persian blue - from the logo */
-    --blue: 30 87 153;
-    --blue-light: 41 137 216;
-    --blue-dark: 15 50 90;
+    /* Persian blue accent - #00abff */
+    --blue: 0 171 255;
+    --blue-light: 102 208 255;
+    --blue-dark: 0 103 153;
     --muted: 255 255 255;
     --border: 255 255 255;
   }
@@ -43,9 +43,9 @@
     background-clip: text;
   }
 
-  /* Blue gradient text - Persian blue */
+  /* Blue gradient text - Persian blue #00abff */
   .text-gradient-blue {
-    background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 100%);
+    background: linear-gradient(135deg, #0089cc 0%, #00abff 50%, #00abff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -73,7 +73,7 @@
     @apply hover:border-white/20 hover:bg-white/[0.05] transition-all duration-200;
   }
 
-  /* Button styles - cleaner white/gold */
+  /* Button styles - cleaner white/blue */
   .btn-primary {
     @apply px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-white/90 transition-all duration-200;
   }
@@ -91,6 +91,15 @@
     background: linear-gradient(135deg, #e8c370 0%, #d4a74a 100%);
   }
 
+  .btn-blue {
+    @apply px-6 py-3 font-semibold rounded-xl transition-all duration-200;
+    background: #00abff;
+    color: #ffffff;
+  }
+  .btn-blue:hover {
+    background: #0089cc;
+  }
+
   /* Badge/Tag styles */
   .badge {
     @apply px-3 py-1 bg-white/[0.08] text-white/80 text-xs rounded-full border border-white/[0.1];
@@ -101,6 +110,13 @@
     background: rgb(var(--gold) / 0.15);
     color: rgb(var(--gold-light));
     border: 1px solid rgb(var(--gold) / 0.25);
+  }
+
+  .badge-blue {
+    @apply px-3 py-1 text-xs rounded-full;
+    background: rgb(var(--blue) / 0.15);
+    color: rgb(var(--blue-light));
+    border: 1px solid rgb(var(--blue) / 0.25);
   }
 
   /* Section container */

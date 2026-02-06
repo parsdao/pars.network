@@ -29,8 +29,8 @@ export function SiteHeader() {
             className="w-10 h-10"
           />
           <div className="flex items-baseline gap-1.5">
-            <span className="text-xl font-bold text-gradient-gold">PARS</span>
-            <span className="text-xs text-white/50 tracking-wider">NETWORK</span>
+            <span className="text-xl font-bold text-gradient-blue">Pars</span>
+            <span className="text-xs text-white/50 tracking-wider">Network</span>
           </div>
         </Link>
 
@@ -63,7 +63,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <a
             href="/docs"
-            className="hidden sm:inline-flex px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
+            className="hidden sm:inline-flex px-4 py-2 bg-blue text-white font-semibold rounded-lg hover:bg-blue-dark transition-colors"
           >
             Start Building
           </a>
@@ -129,7 +129,7 @@ export function SiteHeader() {
             ))}
             <a
               href="/docs"
-              className="inline-flex justify-center px-4 py-2 bg-gold text-black font-semibold rounded-lg hover:bg-gold-light transition-colors"
+              className="inline-flex justify-center px-4 py-2 bg-blue text-white font-semibold rounded-lg hover:bg-blue-dark transition-colors"
             >
               Start Building
             </a>

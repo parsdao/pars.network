@@ -8,9 +8,9 @@ const stats = [
 const techFeatures = [
   {
     title: 'Sovereign L1',
-    desc: 'Independent Layer 1 blockchain built on Lux consensus. Full control over protocol upgrades and governance.',
+    desc: 'Independent Layer 1 blockchain with full control over protocol upgrades, governance, and consensus. No central authority.',
     icon: '🏛️',
-    specs: ['Lux Consensus', 'Sub-second Finality', 'EVM Compatible'],
+    specs: ['Sub-second Finality', 'EVM Compatible', 'Self-Governing'],
   },
   {
     title: 'Post-Quantum Security',
@@ -83,7 +83,7 @@ const defiFeatures = [
   },
   {
     title: 'Cross-Chain Bridge',
-    desc: 'MPC-secured bridge to Ethereum, Arbitrum, and Lux ecosystem. Threshold signatures with 2/3 BFT security.',
+    desc: 'MPC-secured bridge to Ethereum, Arbitrum, and other chains. Threshold signatures with 2/3 BFT security.',
     specs: ['MPC Secured', 'Multi-Chain', '2/3 Threshold'],
   },
 ]
@@ -114,17 +114,18 @@ export default function Home() {
 
           {/* Main Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            <span className="text-gradient-gold">PARS</span>{' '}
-            <span className="text-white">NETWORK</span>
+            <span className="text-gradient-blue">Pars</span>{' '}
+            <span className="text-white">Network</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-white/60 mb-4 max-w-3xl mx-auto">
-            Persian Sovereignty
+            Unstoppable Networks for The People
           </p>
 
-          <p className="text-lg text-white/50 mb-12 max-w-2xl mx-auto text-balance">
-            A sovereign Layer 1 blockchain with post-quantum cryptography,
-            private communications, and DeFi infrastructure for the global Parsi community.
+          <p className="text-lg text-white/50 mb-12 max-w-3xl mx-auto text-balance">
+            The cryptography-based blockchain and networking stack for building local and wide-area networks
+            with readily available hardware. A tool for building thousands of networks—networks without
+            kill-switches, surveillance, censorship and control.
           </p>
 
           {/* CTA Buttons */}
@@ -152,16 +153,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Vision Section */}
+      <section className="section border-t border-white/5">
+        <div className="container-narrow">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Networks for <span className="text-gradient-blue">Human Beings</span>
+            </h2>
+            <p className="text-white/60 max-w-3xl mx-auto text-balance">
+              Pars Network is not one network. It is a tool for building thousands of networks.
+              Networks that can freely interoperate, associate and disassociate with each other.
+              Networks without hierarchical or bureaucratic structures to control or manage them.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+            <div className="card">
+              <h3 className="text-xl font-bold mb-4 text-gradient-blue">For Communities</h3>
+              <p className="text-white/60">
+                Create applications that respect and empower the autonomy and sovereignty of communities
+                and individuals. Secure digital communication that cannot be subjected to outside control,
+                manipulation or censorship.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-xl font-bold mb-4 text-gradient-blue">At Any Scale</h3>
+              <p className="text-white/60">
+                Build both small and potentially planetary-scale networks, ensuring individuals
+                and communities full sovereignty over their own network segments. Works even
+                in adverse conditions with very high latency and extremely low bandwidth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Section */}
       <section id="technology" className="section border-t border-white/5">
         <div className="container-narrow">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Built on <span className="text-gradient-gold">Lux</span> Technology
+              <span className="text-gradient-blue">Sovereign</span> Technology
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Sovereign L1 with the full power of the Lux ecosystem.
-              Post-quantum security, native precompiles, and sub-second finality.
+              Post-quantum cryptography, AI-native blockchain, and privacy-first design.
+              Every component built for coercion resistance.
             </p>
           </div>
 
@@ -183,11 +219,11 @@ export default function Home() {
       </section>
 
       {/* Identity Section */}
-      <section id="identity" className="section bg-gradient-to-b from-transparent via-gold/5 to-transparent">
+      <section id="identity" className="section bg-gradient-to-b from-transparent via-blue/5 to-transparent">
         <div className="container-narrow">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              <span className="text-gradient-gold">pars.id</span> — Sovereign Identity
+              <span className="text-gradient-blue">pars.id</span> — Sovereign Identity
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">
               Decentralized identifiers with coercion resistance.
@@ -203,7 +239,7 @@ export default function Home() {
                 className="card card-hover group"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-gold transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-blue transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-white/50 text-sm">{item.desc}</p>
@@ -230,6 +266,53 @@ export default function Home() {
               <a href="https://pars.id" className="text-white hover:text-white/80 transition-colors text-sm font-medium">
                 Claim your pars.id →
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cryptographic Guarantees */}
+      <section className="section border-t border-white/5">
+        <div className="container-narrow">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Cryptographic <span className="text-gradient-blue">Guarantees</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Fundamental properties enforced by mathematics, not policy. These cannot be disabled.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="card">
+              <div className="text-2xl mb-3">🔒</div>
+              <h3 className="font-bold mb-2">No Source Addresses</h3>
+              <p className="text-white/50 text-sm">No packets include information about origin address, place, machine or person.</p>
+            </div>
+            <div className="card">
+              <div className="text-2xl mb-3">🌐</div>
+              <h3 className="font-bold mb-2">No Central Control</h3>
+              <p className="text-white/50 text-sm">Anyone can allocate addresses when they need them. No permission required.</p>
+            </div>
+            <div className="card">
+              <div className="text-2xl mb-3">⚡</div>
+              <h3 className="font-bold mb-2">Instant Reachability</h3>
+              <p className="text-white/50 text-sm">New addresses become globally reachable in seconds to minutes.</p>
+            </div>
+            <div className="card">
+              <div className="text-2xl mb-3">🔑</div>
+              <h3 className="font-bold mb-2">Portable Addresses</h3>
+              <p className="text-white/50 text-sm">Addresses are self-sovereign and can be moved anywhere while remaining reachable.</p>
+            </div>
+            <div className="card">
+              <div className="text-2xl mb-3">🛡️</div>
+              <h3 className="font-bold mb-2">Encryption by Default</h3>
+              <p className="text-white/50 text-sm">All communication uses strong modern encryption. Cannot establish unencrypted links.</p>
+            </div>
+            <div className="card">
+              <div className="text-2xl mb-3">⏩</div>
+              <h3 className="font-bold mb-2">Forward Secrecy</h3>
+              <p className="text-white/50 text-sm">All encryption keys are ephemeral. Compromising keys reveals nothing past.</p>
             </div>
           </div>
         </div>
@@ -280,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* DeFi Section */}
-      <section id="defi" className="section bg-gradient-to-b from-transparent via-gold/5 to-transparent">
+      <section id="defi" className="section bg-gradient-to-b from-transparent via-blue/5 to-transparent">
         <div className="container-narrow">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">DeFi Infrastructure</h2>
@@ -410,11 +493,11 @@ export default function Home() {
       <section className="section border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Join the Network
+            Build Your Sovereign Network
           </h2>
           <p className="text-white/60 mb-8 max-w-2xl mx-auto text-balance">
-            Build wealth. Protect privacy. Preserve culture.
-            The empire fell. The people scattered. The network endures.
+            Operate your own communication networks. Cover vast areas with independent,
+            interconnectable and autonomous networks. Unstoppable networks for the people.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

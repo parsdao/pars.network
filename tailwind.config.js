@@ -12,6 +12,11 @@ module.exports = {
           DEFAULT: 'rgb(var(--gold) / <alpha-value>)',
           light: 'rgb(var(--gold-light) / <alpha-value>)',
         },
+        blue: {
+          DEFAULT: 'rgb(var(--blue) / <alpha-value>)',
+          light: 'rgb(var(--blue-light) / <alpha-value>)',
+          dark: 'rgb(var(--blue-dark) / <alpha-value>)',
+        },
         muted: {
           DEFAULT: 'rgb(var(--muted) / 0.5)',
           foreground: 'rgb(var(--muted) / 0.7)',

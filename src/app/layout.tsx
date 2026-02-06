@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Pars Network',
   },
   description: 'Sovereign Layer 1 blockchain with post-quantum cryptography, private communications, and DeFi infrastructure for the global Parsi community.',
-  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Parsi', 'Persian', 'Lux'],
+  keywords: ['Pars', 'blockchain', 'Layer 1', 'L1', 'post-quantum', 'ML-KEM', 'ML-DSA', 'DeFi', 'privacy', 'Parsi', 'Persian', 'sovereign', 'mesh network'],
   authors: [{ name: 'Pars Network' }],
   icons: {
     icon: '/assets/logo.png',
